@@ -10,11 +10,12 @@
 body {
   margin: 50px;
 }
-.thumbs{
- display: inline-block;
- margin: 10px 0;
+
+.thumbs {
+  display: inline-block;
+  margin: 10px 0;
 }
 
 .thumbs button {
- margin: 5px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
 }
