@@ -7,37 +7,28 @@
 
 <body>
   <div class="container">
-
     <i>"A man is but the product of his thoughts; what he thinks, he becomes".<br>
       <b>By:</b>Mohandas Karamchand Gandhi</i>
-
-
     <div class="row">
-      <form>
+      <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
         <div class="well">
 
           <div class="form-group">
-            <label for="description"><b>Name</b></label>
-            <input type="text" required class="form-control" id="name" placeholder="Your name" required>
+            <label for="name"><b>Your Name</b></label>
+            <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" placeholder="Your name">
           </div>
 
           <div class="form-group">
-            <label for="description"><b>Author</b></label>
-            <input type="text" required class="form-control" id="name" placeholder="Author name" required>
+            <label for="author"><b>Author</b></label>
+            <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" placeholder="Author name" >
           </div>
 
           <div class="form-group">
-            <label for="description"><b>Enter Quote</b></label>
-            <textarea class="form-control" id="description" rows="4" placeholder="Write Quote" required></textarea>
+            <label for="Quote"><b>Quote</b></label>
+            <textarea class="form-control" id="Quote" rows="4" required [(ngModel)]="newQuote.quote" name="quote" placeholder="Write Quote"></textarea>
           </div>
 
           <button type="submit" class="btn btn-success bt-lg">Add Quote</button>
-        </div>
-
-        <div class="thumbs">
-          <button class="btn btn-success"><i class="fa fa-thumbs-up"> </i></button>
-          <button class="btn btn-danger"><i class="fa fa-thumbs-down"></i></button>
-          <button class="btn btn-outline-danger">delete<i class="fa fa-trash"></i></button>
         </div>
       </form>
     </div>
