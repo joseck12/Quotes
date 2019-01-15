@@ -7,6 +7,24 @@ import {Quote} from '../quote'
   styleUrls: ['./quote-details.component.css']
 })
 export class QuoteDetailsComponent implements OnInit {
+  @Input ()quote:Quote;
+  @Output() isComplete= new EventEmitter<boolean>();
+
+  quoteDelete(complete:boolean){
+    this.isComplete.emit(complete)
+      }
+
+  upVotes:number=0;
+  upVote(){
+     this.upVotes=this.upVotes+1;
+
+  }
+
+  downVotes:number=0;
+  downVote(){
+     this.downVotes=this.downVotes+1;
+
+  }
 
   constructor() { }
 
