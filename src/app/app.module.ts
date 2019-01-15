@@ -5,20 +5,21 @@ import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// import { QuoteComponent } from './quote/quote.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
-import { QuoteInforComponent } from './quote-infor/quote-infor.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
+import { HighlightDirective } from './highlight.directive';
+import { TimeCountPipe } from './time-count.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    // QuoteComponent,
     QuoteFormComponent,
-    QuoteInforComponent,
     QuotesComponent,
     QuoteDetailsComponent
+    HighlightDirective,
+    TimeCountPipe,
+
   ],
   imports: [
     BrowserModule,
