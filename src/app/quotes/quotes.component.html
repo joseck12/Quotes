@@ -1,3 +1,13 @@
-<p>
-  quotes works!
-</p>
+<div class="row">
+    <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
+  </div>
+<ul>
+<div *ngFor='let quote of quotes;let i=index'></div>
+  <div class="row">
+      <div class="details">
+      <p> Quote: "{{quote.quote}}"</p>
+      <p>Author: {{quote.author}}</p>
+      </div>
+      <app-quote-details [quote]='quote'(isComplete)='deleteQuote($event,i)'></app-quote-details>
+      </div>
+  </ul>
