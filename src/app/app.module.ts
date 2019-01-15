@@ -16,9 +16,9 @@ import { TimeCountPipe } from './time-count.pipe';
     AppComponent,
     QuoteFormComponent,
     QuotesComponent,
-    QuoteDetailsComponent
+    QuoteDetailsComponent,
     HighlightDirective,
-    TimeCountPipe,
+    TimeCountPipe
 
   ],
   imports: [
