@@ -1,28 +1,29 @@
 <div class="container-fluid">
-  <div class="jumbotron">
   <h2>Lets empower others through this!</h2>
     <div class="row">
       <form (ngSubmit)='submitQuote()' #quotesForm='ngForm'>
 
             <div class="form-group">
 
-                <label for="name"> Your Name</label>
+                <label for="name"><b> Your Name</b></label>
                 <input type="text" required class="form-control" id="name"[(ngModel)]="newQuote.name" name="name">
 
             </div>
             <div class="form-group">
-                <label for="author">Author</label>
+                <label for="author"><b>Author</b></label>
                 <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author">
 
             </div>
             <div class="form-group">
 
-                <label for="Quote">Quote</label>
+                <label for="Quote"><b>Quote</b></label>
                 <textarea class="form-control" id="Quote" rows="4" required [(ngModel)]="newQuote.quote" name="quote"></textarea>
 
             </div>
+            <<div class="but">
+              
             <button type="submit" class="btn btn-success btn-lg">Add Quote</button>
+            </div>
         </form>
     </div>
-  </div>
 </div>
